@@ -1,0 +1,15 @@
+Enunciado del Proyecto: Sistema de Gestión de Libros
+Objetivo:Desarrollar una aplicación en Java que permita gestionar una colección de libros. La aplicación debe proporcionar la funcionalidad para ordenar los libros según diferentes criterios, como título, autor, año de publicación y número de páginas.
+
+Hacer 2 clases, libros y Biblioteca (la que maneja la coleccion).
+
+<k,v>  k= isbm  v= libro 
+<isbn,libro> -> libro.getISBN(); se lo pedimos al libro y lo almacenamos como Key.
+
+Segun la consigna pide que sea ordenado, por esto es mejor utilizar TreeMap. Con un formato de entrada y luego pasar otro criterio.
+Para ordenar un tipo que no prevee el lenguaje (orden natural), obligatoriamente debo implementar comparable para setear el orden.
+Coleccion ordenada -> Comprable -> si no lo hago me dará una Excepcion -> ClassCastException
+
+(agregar al apunte captura de pantalla.)
+
+
