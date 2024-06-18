@@ -19,7 +19,6 @@ public class Libro implements Comparable<Libro> {
 	public String getTitulo() {
 		return this.titulo;
 	}
-
 	
 	
 	// Indica que por cual atributo 2 obj tipo Libros pueden ser comparados e igualados.
@@ -51,6 +50,5 @@ public class Libro implements Comparable<Libro> {
 	public String toString() {
 		return "Libro [titulo=" + titulo + "]";
 	}
-
 
 }

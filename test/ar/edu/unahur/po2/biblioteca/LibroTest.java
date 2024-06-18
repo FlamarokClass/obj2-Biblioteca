@@ -2,6 +2,7 @@ package ar.edu.unahur.po2.biblioteca;
 
 import static org.junit.Assert.*;
 
+
 import org.junit.Test;
 
 public class LibroTest {
@@ -32,6 +33,7 @@ public class LibroTest {
 		assertEquals(esperado,obtenido);
 	}
 	
+
 	@Test
 	public void QueDosLibrosSeanIGualesCuandoTenganElMismoISBM() {
 		Integer nroPaginas = 123;
@@ -40,9 +42,22 @@ public class LibroTest {
 		String autor = "Autor";
 		Libro libro1 = new Libro(isbn,titulo, autor,nroPaginas);
 		Boolean esperado = true;
-		Libro libro2 = new Libro(isbn+1,titulo, autor,nroPaginas);
+		Libro libro2 = new Libro(isbn,titulo, autor,nroPaginas);
 		Boolean obtenido = libro1.equals(libro2);
 		assertEquals(esperado,obtenido);
+	} 
+	
+	@Test
+	public void QueDosLibrosNOSeanIGualesCuandoTenganDistintoISBM() {
+		Integer nroPaginas = 123;
+		Integer isbn = nroPaginas;
+		String titulo = "Titulo";
+		String autor = "Autor";
+		Libro libro1 = new Libro(isbn,titulo, autor,nroPaginas);
+		Boolean esperado = true;
+		Libro libro2 = new Libro(isbn+1,titulo, autor,nroPaginas);
+		Boolean obtenido = libro1.equals(libro2);
+		assertFalse(esperado.equals(obtenido));
 	} 
 	
 }
